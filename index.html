@@ -6,7 +6,7 @@
         
         <title>Jennan kotisivut</title>
         
-        <link rel="icon" type="image/svg+xml" href="/bunny.svg" />
+        <link rel="icon" type="image/svg+xml" href="public/bunny.svg" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sigmar&display=swap">
         
         <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
-        <link rel="stylesheet" href="style.css">
-
-<!--         <script defer src="header.js"></script>
- -->    </head>
+        <link rel="stylesheet" href="test_style.css">
+    </head>
     <body>
         <header>
             <nav>
@@ -26,19 +24,15 @@
                     <li><a href="#vaalilupaukset">Vaalilupaukset</a></li>
                 </menu>
             </nav>
-        </header>   
+        </header>
         <main>   
             <article id="etusivu">
-                <div>
+                <div class="banner">
                     <h1>Jenna Hertell</h1>
-                    <img src="jenna-hertell.jpg" height="500" width="400">
+                    <img src="public/jenna-hertell.jpg">
                 </div>
                 <section>
-                    <hr>
-                    <p>
-                        Olen 25-vuotias ja suoritan kandidaatintutkinnon loppuvaihetta <i>Kulttuurit ja yhteisöt muuttuvassa maailmassa</i> -opintosuunnassa Jyväskylän yliopistossa. Minulla on laajasti yhteiskuntatieteellistä osaamista, sillä pääaineenani opiskelen kulttuuripolitiikkaa. Sivuaineenani luen sosiaalityötä ja sukupuolentutkimusta. Arvostan taidetta ja toimivia kulttuuripalveluita. Vapaa-ajallani runoilen, nautin hyvästä musiikista ja liikun. Olen myös ehdolla kunta- ja aluevaaleissa Vasemmistoliiton listalla. Minulle tärkeintä on yhteisöllisyys ja kuntalaisten toimiva arki. Ajan tasa-arvoa ja tuon empaattista näkökulmaa politiikkaan.
-                    </p>
-
+                    <p>Olen 25-vuotias ja suoritan kandidaatintutkinnon loppuvaihetta <i>Kulttuurit ja yhteisöt muuttuvassa maailmassa</i> -opintosuunnassa Jyväskylän yliopistossa. Minulla on laajasti yhteiskuntatieteellistä osaamista, sillä pääaineenani opiskelen kulttuuripolitiikkaa. Sivuaineenani luen sosiaalityötä ja sukupuolentutkimusta. Arvostan taidetta ja toimivia kulttuuripalveluita. Vapaa-ajallani runoilen, nautin hyvästä musiikista ja liikun. Olen myös ehdolla kunta- ja aluevaaleissa Vasemmistoliiton listalla. Minulle tärkeintä on yhteisöllisyys ja kuntalaisten toimiva arki. Ajan tasa-arvoa ja tuon empaattista näkökulmaa politiikkaan.</p>
                     <h3>Työkokemus</h3>
                     <ul>
                         <li>Henkilökohtainen avustaja (nyk.)</li>
@@ -64,9 +58,7 @@
                             Suojellaan Keski-Suomen kaunista luontoa
                         </li>
                     </ul>
-                    <p>
-                        Olen ehdolla Vasemmistoliiton listalla nro <span class="inline-emphasis">10</span> kunta- ja aluevaaleissa. Tässä mun vaalilupauksia ja painotuksia! 💗
-                    </p>
+                    <p>Olen ehdolla Vasemmistoliiton listalla nro <span style="color: var(--color-primary); font-size: var(--sm);"><b>10</b></span> kunta- ja aluevaaleissa. Tässä mun vaalilupauksia ja painotuksia! 💗</p>
                     <ol>
                         <li>
                             <details open >                            
@@ -103,7 +95,7 @@
                             </details>
                         </li>
                         <li>
-                            <details open >
+                            <details>
                                 <summary><h4>Sosiaali- ja terveyspalvelut</h4></summary>
                                 <section>
                                     <ul>
@@ -129,12 +121,10 @@
                             </details>
                         </li>
                         <li>
-                            <details open >
+                            <details>
                                 <summary><h4>Osallisuus, kulttuuri ja hyvinvointi</h4></summary>
                                 <section>
-                                    <p>
-                                        Digiloikkaa on järkeistettävä.
-                                    </p>
+                                    <h5>Digiloikkaa on järkeistettävä:</h5>
                                     <ul>
                                         <li>
                                             Kaupungin tulee järjestää maksuttomia digitaitokursseja iäkkäille, vammaisille tai muuten apua tarvitseville henkilöille.
@@ -147,12 +137,12 @@
                             </details>
                         </li>
                         <li>
-                            <details open >
+                            <details>
                                 <summary><h4>Kulttuuri on itseisarvo, mutta myös osa hyvinvointia</h4></summary>
                                 <section>
                                     <ul>
                                         <li>
-                                            Kulttuuripalveluiden saavutettavuuden tukeminen: Lisätään ilmaisia kulttuuritapahtumia eri kaupunginosiin. Näin kulttuuri ei keskity vain keskustaan.
+                                            Kulttuuripalveluiden saavutettavuuden tukeminen: lisätään ilmaisia kulttuuritapahtumia eri kaupunginosiin. Näin kulttuuri ei keskity vain keskustaan.
                                         </li>
                                         <li>
                                             On tuettava maksuttomia ja edullisia liikuntamahdollisuuksia eri-ikäisille, liikuntarajoitteisille ja eri lähtökohdista tuleville ihmisille.
@@ -162,32 +152,30 @@
                             </details>
                         </li>
                         <li>
-                            <details open>
+                            <details>
                                 <summary><h4>Ympäristö ja liikkuminen</h4></summary>
                                 <section>
                                     <ul>
                                         <li>
                                             Keskisuomalaisia metsiä ja luontopolkuja ei myydä yksityiseen käyttöön tai hakkuiden kohteeksi. Lisätään luonnon monimuotoisuutta tukevia toimia, kuten pölyttäjille sopivia viheralueita ja niittyjä.
                                         </li>
+                                    </ul>
+                                    <h5>Panostetaan kestävään liikkumiseen:</h5> 
+                                    <ul>
                                         <li>
-                                            Panostetaan kestävään liikkumiseen: 
-                                            <ul>
-                                                <li>
-                                                    Pyöräpysäköintiä parannettava: lisätään aidosti turvallisia ja säältä suojattuja pyörätelineitä kaupungin eri osiin. Lisäksi jalankulun viihtyisyyttä voitaisiin parantaa esimerkiksi lisäämällä penkkejä ja esteettömiä kävelyreittejä
-                                                </li>
-                                            </ul>
+                                            Pyöräpysäköintiä parannettava: lisätään aidosti turvallisia ja säältä suojattuja pyörätelineitä kaupungin eri osiin. Lisäksi jalankulun viihtyisyyttä voitaisiin parantaa esimerkiksi lisäämällä penkkejä ja esteettömiä kävelyreittejä
                                         </li>
                                     </ul>
                                 </section>
                             </details>
                         </li>
                     </ol>
-                </section>             
+                </section>
             </article>
         </main>
         <footer>
             <a href="mailto:jenna.hertell@gmail.com">Ota yhteyttä sähköpostitse!</a>
-        </footer>  
+        </footer>
         <script>
             let header = document.querySelector("header"),
                 position;

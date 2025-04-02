@@ -1,0 +1,206 @@
+:root {
+    /* Colors */
+    --color-primary: #F00A64;
+    --color-secondary: cornflowerblue;
+    --color-tertiary: aliceblue;
+    --text-color: #444;
+
+    /* Consistent visual ratio */
+    --visual-ratio: 1.45;
+
+    /* Spacing */
+    --xxs: calc(1rem / var(--visual-ratio));
+    --xs: calc(var(--visual-ratio) * var(--xxs));
+    --sm: calc(var(--visual-ratio) * var(--xs));
+    --md: calc(var(--visual-ratio) * var(--sm));
+    --lg: calc(var(--visual-ratio) * var(--md));
+    --xl: calc(var(--visual-ratio) * var(--lg));
+    --xxl: calc(var(--visual-ratio) * var(--xl));
+
+    scroll-behavior: smooth;
+    font-family: Inter;
+    color: var(--text-color);
+}
+
+body { min-width: 320px; }
+
+ul { 
+    padding-left: var(--xs);
+    list-style: none; 
+
+    li + li { margin-top: var(--xxs) }
+
+    li::before {
+        position: absolute;
+        font-size: var(--sm);
+        color: var(--color-primary);
+        content: "•";
+        transform: translate(calc(var(--sm) * -0.75), 0);
+    }
+}
+
+
+li, p {
+    line-height: 1.5em;
+    max-width: 65ch;
+}
+
+/* These relate to the second page lists inside details */
+p + ul, li > ul { margin-top: var(--xs)}
+
+/* Header and navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    background-color: white;
+    border-bottom: var(--xs) solid var(--color-primary);
+}
+
+.hide-header { transform: translateY(-100%); }
+
+nav {
+   width: fit-content;
+   margin: 0 auto;
+}
+
+nav menu {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap-reverse;
+    margin: 0;
+    padding: var(--xs) 0;
+
+    li {
+        list-style: none;
+        text-align: left;
+        margin-inline: var(--xs);
+    }
+
+    a {
+        color: var(--color-primary);
+        font-family: Sigmar;
+        font-size: var(--xs);
+    }
+}
+
+article:first-of-type, article:target {
+    display: block;
+}
+
+article, article:has(~ article:target) {
+    display: none;
+    scroll-margin-top: 9001rem;
+}
+
+/* Main, front page */
+
+article { padding: var(--xs); } /* General purpose padding for mobile */
+
+article > section > * + * {
+    margin-top: var(--sm);
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+    h1 { 
+        margin-block: 0;
+        font-family: Sigmar;
+        font-size: var(--lg);
+        color: var(--color-primary);
+        align-self: flex-start;
+        text-align: center;
+    }
+
+    img {
+        height: auto;
+        max-width: min(75%, 500px);
+    }
+}
+
+h3 {
+    font-family: Sigmar;
+    font-size: var(--md);
+    color: var(--color-primary);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--md) 0;
+
+    * { margin: 0; }
+}
+
+/* Second page */
+
+ol {
+    list-style: none;
+    counter-reset: item;
+    padding: 0;
+}
+
+summary {
+    display: inline-flex;
+    align-items: flex-start;
+
+    &::before {
+        font-family: Sigmar;
+        font-size: var(--sm);
+        color: var(--color-primary);
+        content: counter(item) ".";
+        counter-increment: item;
+    }
+
+    h4 {
+        font-family: Sigmar;
+        font-size: var(--sm);
+        color: var(--color-primary);
+        margin-left: var(--xxs);
+    }
+}
+
+summary + section {
+    margin-top: var(--xs);
+}
+
+h5 {
+    font-family: Sigmar;
+    font-size: var(--xs);
+    color: var(--color-primary);
+    align-self: flex-start;
+    margin-block: var(--xs);
+}
+
+/* As regards details #3 */
+h5:first-child {
+    margin-top: 0;
+}
+
+ol > li + li {
+    margin-top: var(--sm)
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--xs) 0;
+    border-top: var(--xs) solid var(--color-primary);
+    
+    a {
+        color: var(--color-primary);
+        font-family: Sigmar;
+        font-size: var(--xs);
+    }
+}
