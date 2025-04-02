@@ -1,0 +1,28 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon ./src/bin/index.ts"
+  },
+  "keywords": [
+    "homepage"
+  ],
+  "author": "Eero Uusaro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  }
+}
