@@ -115,6 +115,8 @@ article > section > * + * {
         color: var(--color-primary);
         align-self: flex-start;
         text-align: center;
+
+        display: inline;        
     }
 
     img {
