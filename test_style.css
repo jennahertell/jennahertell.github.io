@@ -152,6 +152,11 @@ summary {
     display: inline-flex;
     align-items: flex-start;
 
+    /* Remove the summary icon on Safari */
+    &::-webkit-details-marker {
+        display: none;
+    }
+
     &::before {
         font-family: Sigmar;
         font-size: var(--sm);
